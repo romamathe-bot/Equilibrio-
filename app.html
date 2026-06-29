@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Equilibrio</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+
+<body>
+
+  <div class="card" style="margin:20px auto;">
+
+    <h2 id="hello">Buenos días</h2>
+
+    <div class="logo">⚖️</div>
+
+    <h1 id="score">--</h1>
+    <p class="subtitle">Equilibrio de hoy</p>
+
+    <hr style="margin:20px 0;">
+
+    <div class="section">
+      👶 Phoenix
+      <div class="subtitle">Tareas pendientes: 3</div>
+    </div>
+
+    <div class="section">
+      🐶 Perro
+      <div class="subtitle">Tareas pendientes: 1</div>
+    </div>
+
+    <div class="section">
+      🏠 Casa
+      <div class="subtitle">Tareas pendientes: 2</div>
+    </div>
+
+    <div class="section">
+      ❤️ Pareja
+      <div class="subtitle">Momento juntos hoy</div>
+    </div>
+
+    <button class="btn" onclick="logout()">Cambiar usuario</button>
+
+  </div>
+
+<script>
+  const user = localStorage.getItem("equilibrio_user");
+
+  if(!user){
+    window.location.href = "login.html";
+  }
+
+  document.getElementById("hello").innerText = "Buenos días " + user;
+
+  // score simple pour l'instant
+  const score = Math.floor(Math.random() * 20) + 80;
+  document.getElementById("score").innerText = score;
+
+  function logout(){
+    localStorage.removeItem("equilibrio_user");
+    window.location.href = "login.html";
+  }
+</script>
+
+</body>
+</html>
