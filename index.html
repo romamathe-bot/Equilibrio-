@@ -11,7 +11,7 @@
 
   <link rel="manifest" href="manifest.json" />
   <link rel="apple-touch-icon" href="assets/logo.png" />
-  <link rel="stylesheet" href="./style.css?v=4" />
+  <link rel="stylesheet" href="./style.css?v=5" />
 </head>
 
 <body>
@@ -35,11 +35,26 @@
 
     <header class="topbar">
       <div>
-        <p class="eyebrow">Buenos días</p>
+        <p class="eyebrow">Hoy</p>
         <h2 id="helloName">Rom</h2>
       </div>
       <img src="assets/logo.png" class="top-logo" />
     </header>
+
+    <section class="daily-summary">
+      <div>
+        <strong id="todayTasks">0</strong>
+        <span>tareas</span>
+      </div>
+      <div>
+        <strong id="todayPoints">0</strong>
+        <span>pts</span>
+      </div>
+      <div>
+        <strong id="todayStatus">❤️</strong>
+        <span>equilibrio</span>
+      </div>
+    </section>
 
     <section class="balance-card">
       <p class="eyebrow">Equilibrio de hoy</p>
@@ -74,16 +89,11 @@
       </div>
 
       <div class="week-row">
-        <div>
-          <strong id="weekRom">0</strong>
-          <span>Rom</span>
-        </div>
-        <div>
-          <strong id="weekCarol">0</strong>
-          <span>Carol</span>
-        </div>
+        <div><strong id="weekRom">0</strong><span>Rom</span></div>
+        <div><strong id="weekCarol">0</strong><span>Carol</span></div>
       </div>
 
+      <div id="weekGraph" class="week-graph"></div>
       <p id="weekText" class="week-text">Sin datos todavía.</p>
     </section>
 
@@ -132,13 +142,15 @@
   </div>
 
   <nav class="bottom-nav">
-    <button class="nav-active">Inicio</button>
+    <button class="nav-active">🏠</button>
+    <button>📅</button>
     <button onclick="openNewTask()">＋</button>
-    <button onclick="resetApp()">Ajustes</button>
+    <button>📊</button>
+    <button onclick="resetApp()">⚙️</button>
   </nav>
 
 </main>
 
-<script src="./app.js?v=4"></script>
+<script src="./app.js?v=5"></script>
 </body>
 </html>
