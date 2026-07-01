@@ -1,0 +1,19 @@
+{
+  "name": "Equilibrio",
+  "short_name": "Equilibrio",
+  "description": "Aplicación familiar para equilibrar tareas entre Rom y Carol.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#F5F7FB",
+  "theme_color": "#0A84FF",
+  "icons": [
+    {
+      "src": "assets/logo.png",
+      "sizes": "180x180",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
